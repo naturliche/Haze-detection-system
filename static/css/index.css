@@ -1,0 +1,59 @@
+.locate{
+  height: 150px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+.weather{
+  height: 220px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+
+}
+.air{
+  height: 150px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+.tem{
+  height: 400px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+.hum{
+  height: 400px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+.c_bg_css{
+  height: 150px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+body{
+  background-image:url('/static/images/blue_tree.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+.font_set_h2{
+	color: #FFFFFF;
+  letter-spacing:3px;
+}
+.font_set_h3{
+	color: #FFFFFF;
+  letter-spacing:3px;
+}
+.font_set_h4{
+	color: #FFFFFF;
+  letter-spacing:3px;
+}
+.font_set_p{
+	color: #FFFFFF;
+  letter-spacing:3px;
+}

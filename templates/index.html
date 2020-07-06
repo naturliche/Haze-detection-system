@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head> 
+	<meta charset="utf-8"> 
+	<title>雾霾探测系统</title> 
+	<link  rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
+<!--
+	<ul >
+    <li class="loc_weath"><img src="{{ url_for('static', filename='images/bear.png') }}"/></li>
+    <li class="li_img"><img src="{{ url_for('static', filename='images/pink_clound.png') }}"/></li>   
+	</ul>
+-->
+
+<!--
+<style>
+div.loc_weath{
+  height: 220px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+
+}
+div.air{
+  height: 150px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+div.tem{
+  height: 400px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+div.hum{
+  height: 400px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+div.c_bg_css{
+  height: 150px;
+  width:1000px;
+  background-color:transparent;
+  margin: auto;
+}
+body{
+  background-image:url('../static/images/blue_tree.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+.font_set_h2{
+	color: #FFFFFF;
+	letter-spacing:2px;
+}
+.font_set_h3{
+	color: #FFFFFF;
+	letter-spacing:2px;
+}
+.font_set_h4{
+	color: #FFFFFF;
+	letter-spacing:2px;
+}
+.font_set_p{
+	color: #FFFFFF;
+	letter-spacing:2px
+}
+
+</style>
+-->
+<!--
+<style>
+	div.loc_weath{
+		background-image:url('../static/images/blue_sea.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border: 3px solid white;
+		height: 220px;
+		width:1000px;
+		margin: auto;
+
+	}
+	div.air{
+		background-image:url('../static/images/li_black_sea.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border: 3px solid white;
+		height: 150px;
+		width:1000px;
+		margin: auto;
+	}
+	div.tem{
+		background-image:url('../static/images/smell_clound.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border: 3px solid white;
+		height: 400px;
+		width:1000px;
+		margin: auto;
+	}
+	div.hum{
+		background-image:url('../static/images/smell_clound.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border: 3px solid white;
+		height: 400px;
+		width:1000px;
+		margin: auto;
+	}
+	div.c_bg_css{
+		background-image:url('../static/images/pink_moon.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border: 3px solid white;
+		height: 150px;
+		width:1000px;
+		margin: auto;
+	}
+	body{
+	  background-color:#b0c4de;
+	  margin: 0;
+	}
+</style>
+-->
+</head>
+
+<div id="locate" class="locate">
+<h2 class="font_set_h2" style="margin-bottom:0;">位置信息</h2>
+<h3 class="font_set_h3" style="margin-bottom:0;">您当前所在的位置为</h3>
+<h4 class="font_set_h4">
+{{context.location}}
+</h4>
+</div>
+
+<div id="weather" class="weather">
+<h2 class="font_set_h2" style="margin-bottom:0;">实时天气数据</h2>
+<!-- 需要利用和风天气返回的数据 -->
+<h4 class="font_set_h4">
+	天气状况:{{context.cond_txt0}}
+	<br  />
+	温度:{{context.tmp0}}
+	<br />
+	体感温度:{{context.fl0}}
+	<br />
+	风向:{{context.wind_dir0}}
+	<br />
+	风速:{{context.wind_spd0}}
+	<br />
+	相对湿度:{{context.hum0}}
+	<br />
+	更新时间:{{context.update_loc0}}
+</h4>
+</div>
+
+<!--需要返回的空气质量数据-->
+<div id="air_quality" class="air">
+<h2 class="font_set_h2" style="margin-bottom:0;">空气质量数据</h2>
+<h4 class="font_set_h4">
+	空气质量:{{context.brf1}}
+	<br />
+	建议:{{context.txt1}}
+	<br />
+	更新时间:{{context.update_loc1}}
+</h4>
+</div>
+
+<div id="temperature" class="tem">
+<h2 class="font_set_h2" style="margin-bottom:0;">气温折线图</h2>
+<!--需要返回的温度数据进行绘图-->
+<img src="../static/images/tmp.png" width="900" height="300" />
+</div>
+
+<div id="relative_humidity" class="hum">
+<h2 class="font_set_h2" class="font_set_h2" style="margin-bottom:0;">相对湿度折线图</h2>
+<!--需要返回的湿度数据进行绘图-->
+
+<img src="../static/images/hum.png" width="900" height="300" />
+
+</div>
+
+
+<div id="data_source" class="c_bg_css">
+<h2 class="font_set_h2" style="margin-bottom:0;">数据源</h2>
+<!--这里定位有问题，需要后期更改-->
+<h4 class="font_set_h4">
+	定位数据来源   <a class="font_set_p" href="https://map.qq.com/">腾讯地图</a>
+</h4>
+<h4 class="font_set_h4">
+	天气数据来源   <a class="font_set_p" href="https://dev.heweather.com/">和风天气</a>
+</h4>
+</div>
+
+<div id="about" class="c_bg_css">
+<h2 class="font_set_h2" style="margin-bottom:0;">关于</h2>
+<p class="font_set_p">
+	本项目由史静文，张帆远航和朱笑言共同完成，主要使用python连接接口，爬取信息，再用flask渲染。
+</p>
+</div>
+
+</body>
+</html>
