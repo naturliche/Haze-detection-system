@@ -2,10 +2,12 @@ README
 
 --------------
 
-执行命令：![image-20200821143439383](C:\Users\natur\AppData\Roaming\Typora\typora-user-images\image-20200821143439383.png)
+执行命令：
+
+[<img src="https://s1.ax1x.com/2020/08/21/dtKih4.th.png" alt="dtKih4.th.png"  />](https://imgchr.com/i/dtKih4)
 
 -------------------------------
 
 结果呈现图：
 
-![image-20200821143124823](C:\Users\natur\AppData\Roaming\Typora\typora-user-images\image-20200821143124823.png)
+[<img src="https://s1.ax1x.com/2020/08/21/dtKVj1.th.png" alt="dtKVj1.th.png"  />](https://imgchr.com/i/dtKVj1)
